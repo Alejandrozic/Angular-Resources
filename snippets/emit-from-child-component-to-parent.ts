@@ -4,7 +4,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 ...
 export class ChildComponent {
-  @Output() cancel =  new EventEmitter<string>();                         // <== 1
+  @Output() cancel =  new EventEmitter<void>();                           // <== 1
 
   onCancelBtn() {
     this.cancel.emit();                                                   // <== 2
