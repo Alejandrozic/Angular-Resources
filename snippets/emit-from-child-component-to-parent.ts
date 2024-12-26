@@ -14,7 +14,7 @@ export class ChildComponent {
 ////////////////////////////////////////
 // Child HTML
 
-// <div class="backdrop"></div>
+// <div class="backdrop" (click)="onCancelBtn()"></div>                  // <== 3.optional (click on backdrop will also cancel)
 // <dialog open>
 //     ...
 //     <p class="actions">
