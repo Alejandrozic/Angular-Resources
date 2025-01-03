@@ -1,4 +1,6 @@
-# Angular Signal Effects
+# Angular Signals
+
+## Overview
 
 **Signals** in Angular (introduced in Angular 16) are part of the reactivity model designed to handle state 
 and change detection more efficiently. 
