@@ -97,6 +97,6 @@ export class TestComponent {
 }
 ```
 
-The [(ngModel)] directive binds the username property in the component to the input field. Any changes in the input field will update username, and changes to username in the component will reflect in the input field.
+The `[(ngModel)]` directive binds the username property in the component to the input field. Any changes in the input field will update username, and changes to username in the component will reflect in the input field.
 
 ---
