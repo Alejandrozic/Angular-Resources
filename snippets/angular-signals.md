@@ -5,6 +5,30 @@
 **Signals** in Angular (introduced in Angular 16) are part of the reactivity model designed to handle state 
 and change detection more efficiently. 
 
+```typescript
+import { Component } from '@angular/core';
+import { signal } from '@angular/core';
+
+@Component({
+  selector: 'app-counter',
+  template: `
+    <div>
+      <p>Current Count: {{ count() }}</p>
+      <button (click)="increase()">Increase</button>
+    </div>
+  `,
+})
+export class CounterComponent {
+  // Create a signal with an initial value of 0
+  count = signal(0);
+
+  // Method to increase the count
+  increase() {
+    this.count.set(this.count() + 1);
+  }
+}
+```
+
 ## Computed Signals
 
 A **computed** signal is a signal whose value is automatically recalculated whenever the signals it depends on change.
