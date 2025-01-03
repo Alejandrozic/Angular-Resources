@@ -40,10 +40,7 @@ const doubleCount = computed(() => count() * 2);
 console.log(doubleCount()); // Outputs: 0
 count.set(2);
 console.log(doubleCount()); // Outputs: 4
-
 ```
-
----
 
 ## Signal Effects
 
@@ -60,6 +57,7 @@ console.log(doubleCount()); // Outputs: 4
 import { effect } from '@angular/core';
 
 const count = signal(0);
+```
 
 const myEffect = effect(() => {
   console.log(`Count changed: ${count()}`);
