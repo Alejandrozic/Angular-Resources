@@ -5,9 +5,23 @@
 **Signals** in Angular (introduced in Angular 16) are part of the reactivity model designed to handle state 
 and change detection more efficiently. 
 
+## Computed Signals
+
+A **computed** signal is a signal whose value is automatically recalculated whenever the signals it depends on change.
+
+```typescript
+const count = signal(0);
+const doubleCount = computed(() => count() * 2);
+
+console.log(doubleCount()); // Outputs: 0
+count.set(2);
+console.log(doubleCount()); // Outputs: 4
+
+```
+
 ---
 
-## Angular Signal Effects
+## Signal Effects
 
 **Effects** are used to perform side effects based on signal changes.
 
