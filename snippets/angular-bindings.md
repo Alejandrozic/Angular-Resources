@@ -76,3 +76,27 @@ export class TestComponent {
 ```
 
 ---
+
+## 4. Two-Way Binding
+- **Purpose**: Two-way data binding enables both the component and the view to be synchronized. This means that changes in the view are automatically reflected in the component, and changes in the component are reflected in the view.
+- **Syntax**: `[(ngModel)] = "expression"`
+- **Use Case**: Useful for forms or input elements, where you want to bind data both ways (view to model, model to view).
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-test',
+  template: `
+  <input [(ngModel)]="username" />
+  <p>Entered username: {{ username }}</p>
+`,
+})
+export class TestComponent {
+  username: string = '';
+}
+```
+
+The [(ngModel)] directive binds the username property in the component to the input field. Any changes in the input field will update username, and changes to username in the component will reflect in the input field.
+
+---
