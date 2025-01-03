@@ -49,7 +49,7 @@ export class DialogComponent {
 </dialog>
 ```
 
-#### Application (Parent) Component (`app.component.html`):
+#### Application (Parent) Component (`app.component.ts`):
 
 ```javascript
 import { Component } from '@angular/core';
@@ -75,6 +75,8 @@ export class AppComponent {
   }
 }
 ```
+
+#### Application (Parent) Component (`app.component.html`):
 
 ```html
 @if (isDiaglogActive) {
