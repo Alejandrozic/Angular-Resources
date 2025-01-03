@@ -22,7 +22,7 @@ const count = signal(0);
 const myEffect = effect(() => {
   console.log(`Count changed: ${count()}`);
 });
-
+```
 
 # Common Use Cases for Angular Signal Effects
 
