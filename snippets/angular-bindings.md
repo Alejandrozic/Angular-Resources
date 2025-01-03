@@ -10,6 +10,13 @@ Angular provides four main types of data bindings:
 
 Each of these bindings allows different kinds of interaction with the DOM and component data.
 
+| **Binding Type**       | **Direction of Data Flow** | **Syntax**                          | **Use Case**                                                |
+|------------------------|----------------------------|-------------------------------------|-------------------------------------------------------------|
+| **Interpolation**       | Component to Template      | `{{ expression }}`                  | Displaying data within HTML elements (e.g., text content)    |
+| **Property Binding**    | Component to Template      | `[property] = "expression"`         | Binding properties of DOM elements (e.g., `src`, `href`)     |
+| **Event Binding**       | Template to Component      | `(event) = "expression"`            | Responding to user actions (e.g., clicks, mouse events)      |
+| **Two-Way Binding**     | Component ↔ Template       | `[(ngModel)] = "expression"`        | Synchronizing input elements with component data (forms)    |
+
 ---
 
 ## 1. Interpolation (One-Way Data Binding)
