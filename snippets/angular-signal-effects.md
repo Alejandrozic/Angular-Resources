@@ -23,39 +23,3 @@ const myEffect = effect(() => {
   console.log(`Count changed: ${count()}`);
 });
 ```
-
-# Common Use Cases
-
-## 1. Logging
-
-Debug signal updates to understand how the state changes:
-
-```typescript
-effect(() => console.log(signalValue()));
-```
-
----
-
-## 2. Trigger Side Effects
-
-React to signal changes to perform UI updates, show alerts, or execute other imperative actions:
-
-```typescript
-effect(() => {
-  if (count() > 5) {
-    alert("Count exceeded 5!");
-  }
-});
-```
-
----
-
-## 3. Dynamic CSS or DOM Updates
-
-Update DOM properties or apply styles dynamically:
-
-```typescript
-effect(() => {
-  document.body.style.backgroundColor = count() > 10 ? "red" : "blue";
-});
-```
