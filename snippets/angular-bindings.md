@@ -17,8 +17,6 @@ Each of these bindings allows different kinds of interaction with the DOM and co
 - **Syntax**: `{{ expression }}`
 - **Use Case**: Displaying data or properties from the component in the template.
 
-### Example:
-
 ```typescript
 import { Component } from '@angular/core';
 
@@ -40,8 +38,6 @@ export class TestComponent {
 - **Syntax**: `[property] = "expression"`
 - **Use Case**: Dynamically changing element properties based on component data.
 
-### Example:
-
 ```typescript
 import { Component } from '@angular/core';
 
@@ -53,6 +49,29 @@ import { Component } from '@angular/core';
 })
 export class TestComponent {
   imageUrl: string = 'https://example.com/image.jpg';
+}
+```
+
+---
+
+## 3. Event Binding (One-Way Data Binding)
+- **Purpose**: Event binding allows you to listen for user actions (e.g., clicks, mouse movements) and respond to them by executing methods defined in the component class.
+- **Syntax**: `(event) = "expression"`
+- **Use Case**: Handling user events, such as clicks or keypresses, to trigger methods in the component class.
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-test',
+  template: `
+    <button (click)="onClick()">Click Me</button>
+  `,
+})
+export class TestComponent {
+    onClick() {
+    console.log('Button clicked!');
+  }
 }
 ```
 
