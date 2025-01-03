@@ -4,10 +4,19 @@ In Angular, **event emission** is a mechanism for communication between componen
 to a parent component. This is typically achieved using `@Output` properties along with `EventEmitter`.
 
 Using `@Output` and `EventEmitter`
+
 In Angular, the most common way to emit events from a child component to a parent component is through the `@Output` decorator and the `EventEmitter` class.
 
 ## Example (child -> parent)
 
+1. **In the Child Component:**
+   - You define an `@Output` property that holds an instance of `EventEmitter`.
+   - This emitter will trigger events that the parent can listen to.
+   - The `EventEmitter.emit()` method is called when the event is triggered.
+
+2. **In the Parent Component:**
+   - You use the child component in the parent template.
+   - You listen to the emitted event using Angular's event binding syntax (`(eventName)`).
 
 #### Child Component (`child.component.ts`):
 ```typescript
