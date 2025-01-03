@@ -85,16 +85,19 @@ export class ChildAComponent {
 
 ```typescript
 import { Component } from '@angular/core';
+import { ChildAComponent } from './childa.component';
+import { ChildBComponent } from './childb.component';
 
 @Component({
   selector: 'app-parent',
+  imports: [ChildAComponent, ChildBComponent],
   template: `
     <app-childa (messageEvent)="receiveMessage($event)"></app-childa>
     <app-childb [receivedMessage]="message"></app-childb>
   `
 })
 export class ParentComponent {
-  message: string;
+  message?: string;
 
   receiveMessage(message: string) {
     this.message = message; // Receive data from ChildA and store it in `message`
@@ -112,7 +115,6 @@ import { Component, Input } from '@angular/core';
   template: `<p>Received message: {{ receivedMessage }}</p>`
 })
 export class ChildBComponent {
-  @Input() receivedMessage: string;
+  @Input() receivedMessage?: string;
 }
-
 ```
