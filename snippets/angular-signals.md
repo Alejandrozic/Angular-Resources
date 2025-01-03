@@ -3,18 +3,16 @@
 **Signals** in Angular (introduced in Angular 16) are part of the reactivity model designed to handle state 
 and change detection more efficiently. 
 
+---
+
 ## Angular Signal Effects
 
 **Effects** are used to perform side effects based on signal changes.
-
----
 
 ### What Are Effects?
 - **Purpose**: Automatically run logic whenever the value of a signal (or signals) changes.
 - **Use Case**: For tasks such as logging, API calls, DOM manipulation, or triggering external processes when 
                 a signal updates.
-
----
 
 ### How to Create an Effect
 
@@ -26,4 +24,5 @@ const count = signal(0);
 const myEffect = effect(() => {
   console.log(`Count changed: ${count()}`);
 });
-```
+
+---
