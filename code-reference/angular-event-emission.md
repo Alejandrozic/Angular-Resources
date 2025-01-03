@@ -51,3 +51,68 @@ export class ParentComponent {
   }
 }
 ```
+
+## Example (childA -> parent -> childB)
+
+1. Scenario
+- ChildA Component emits an event to the parent when a button is clicked.
+- The parent component receives the event and then sends the data to another childB component, which displays it.
+
+2. Steps:
+- **ChildAComponent** emits an event to the parent.
+- **ParentComponent** listens to the event from `ChildAComponent` and passes the data to `ChildBComponent`.
+- **ChildBComponent** receives and displays the data passed from the parent.
+
+### Child Component A (`childa.component.ts`):
+
+```typescript
+import { Component, Output, EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'app-childa',
+  template: `<button (click)="sendMessage()">Send to Parent</button>`
+})
+export class ChildAComponent {
+  @Output() messageEvent = new EventEmitter<string>();
+
+  sendMessage() {
+    this.messageEvent.emit('Data from Child A');
+  }
+}
+```
+
+### Parent Component (`parent.component.ts`):
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-parent',
+  template: `
+    <app-childa (messageEvent)="receiveMessage($event)"></app-childa>
+    <app-childb [receivedMessage]="message"></app-childb>
+  `
+})
+export class ParentComponent {
+  message: string;
+
+  receiveMessage(message: string) {
+    this.message = message; // Receive data from ChildA and store it in `message`
+  }
+}
+```
+
+### Child Component B (`childb.component.ts`):
+
+```typescript
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-childb',
+  template: `<p>Received message: {{ receivedMessage }}</p>`
+})
+export class ChildBComponent {
+  @Input() receivedMessage: string;
+}
+
+```
