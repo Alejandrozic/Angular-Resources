@@ -24,7 +24,7 @@ const myEffect = effect(() => {
 });
 ```
 
-# Common Use Cases for Angular Signal Effects
+# Common Use Cases
 
 ## 1. Logging
 
