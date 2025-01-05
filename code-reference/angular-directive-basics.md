@@ -1,6 +1,6 @@
 # Overview
 
----
+Three kinds of directives.
 
 ## Types of Angular Directives
 
@@ -60,9 +60,3 @@ export class HeaderComponent {}
   Click Me!
 </div>
 ```
-
-
-
-## Attribute Directives
-
-PLACEHOLDER
