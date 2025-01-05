@@ -1,3 +1,9 @@
+## Component Directives
+
+PLACEHOLDER
+
+## Structural Directives
+
 ### Iteration and Conditionals
 
 **ngFor, ngIf (Pre-Angular 17)**
@@ -27,3 +33,7 @@
   <div>Empty!</div>
 }
 ```
+
+## Attribute Directives
+
+PLACEHOLDER
