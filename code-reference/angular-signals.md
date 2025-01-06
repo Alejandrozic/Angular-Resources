@@ -25,6 +25,8 @@ export class CounterComponent {
   // Method to increase the count
   increase() {
     this.count.set(this.count() + 1);
+    // Alternative use 'update' for more complex logic
+    // this.count.update( (prevCount) => prevCount + 1 );
   }
 }
 ```
