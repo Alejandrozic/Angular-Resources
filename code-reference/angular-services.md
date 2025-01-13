@@ -130,17 +130,20 @@ export class UserListComponent implements OnInit {
 
 ## **Service Scopes**
 
-1. **`@Injectable({ providedIn: 'root' })`:**
-   - The service is available globally (singleton).
-   - Recommended for most use cases.
+1. Module Injector
+   - **` @Injectable({ providedIn: 'root' }) `**
+   - Application-wide
+   - Use when your application structure revolves around Angular modules
 
-2. **Provide in Modules/Components:**
-   - Use `providers` in a module/component for limited scope.
-   ```typescript
-   @NgModule({
-     providers: [MyService],
-   })
-   ```
+2. Environment Injector
+   - **` bootstrapApplication(AppComponent, { providers: [...]}).catch((err) => console.error(err)); `**
+   - Application-wide (environment specific)
+   - Perfect for applications built with standalone components rather than NgModules
+
+3. Element Injector
+   - **` @Component({ providers: [...] })	 `**
+   - Unique per-component
+   - Caveat: Each instance of the component will have its own instance of the service
 
 ---
 
