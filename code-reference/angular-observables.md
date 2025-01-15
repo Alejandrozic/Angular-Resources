@@ -157,5 +157,3 @@ export class SearchComponent {
 3. **Use Operators**: Leverage operators to simplify transformations and reduce boilerplate code.
 
 ---
-
-RxJS makes managing asynchronous operations in Angular much easier, allowing developers to handle complex workflows like HTTP calls, event streams, and user inputs seamlessly.
