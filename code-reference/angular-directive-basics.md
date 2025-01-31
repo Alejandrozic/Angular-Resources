@@ -40,7 +40,7 @@ export class HeaderComponent {}
 **@for, @if (Angular 17+)**
 
 ```html
-@for (let item of items; let i = index) {
+@for (item of items; track ... ) {
   @if (item.active) {
     <div>Active: {{ i }} - {{ item.name }}</div>
   } @else {
