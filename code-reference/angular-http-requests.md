@@ -1,4 +1,4 @@
-# Sending HTTP Requests in Angular 19+
+# Sending HTTP Requests in Angular
 
 ## Introduction
 In Angular, HTTP requests are handled using the `HttpClient` module, which provides an API for making requests to a backend service.
