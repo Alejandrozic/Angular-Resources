@@ -96,7 +96,18 @@ export class PostsComponent implements OnInit {
 }
 ```
 
-## 4. Handling HTTP Interceptors
+## 4. Utilizing RxJS Operators
+
+`tap()` 
+The `tap()` operator is used to perform side effects without modifying the stream.
+
+`finalize()` 
+The `finalize()` operator runs a callback when the observable completes or errors out.
+
+`pipe()` 
+The `pipe()` method is used to chain multiple operators.
+
+## 5. Handling HTTP Interceptors
 HTTP interceptors allow you to modify requests and responses globally, such as adding authentication tokens.
 
 Create an interceptor:
